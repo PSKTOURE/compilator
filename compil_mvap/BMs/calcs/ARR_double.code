@@ -1,0 +1,15 @@
+double[10] arr;
+double l;
+double f(double[] tab, int n){
+    double res;
+    double[10] arr;
+    int i = 0;
+    for(i=0; i < n; i+=1){
+        tab[i] = 2.0;
+        arr[i] = tab[i];
+        res += arr[i] + tab[i] ;
+    }
+    return res;
+}
+l=f(arr, 10);
+print(l);

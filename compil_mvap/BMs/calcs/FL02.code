@@ -1,0 +1,45 @@
+int i = 5;
+
+int f(int x, int z, int a, int c) {
+    int aux(int y) {
+        int aux(int x) {
+            print(7777);
+            print(x);
+            print(y);
+            print(z);
+            print(a);
+            print(c);
+            print(8888);
+        }
+        print(y);
+        print(z);
+        print(a);
+        print(c);
+        aux(111111);
+        return y * 2;
+    }
+    print(x);
+    x = aux(x);
+    print(x);
+    return x;
+}
+
+int g(int x, double y, int z) {
+    int a;
+    int b = 90;
+    int aux(int x) {
+        print(x);
+        9999999;
+        print(y);
+        print(a);
+        print(b);
+        print(z);
+    }
+    a = 50;
+    aux(80);
+}
+
+
+print(f(i, 9, 0, 42));
+print(-90000001)
+g(-1, 2.8, -3);

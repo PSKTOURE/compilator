@@ -1,0 +1,16 @@
+int i;
+
+for(i = 0; i < 3; i+=1) {
+    print(0)
+	continue 
+	print(i)
+}
+
+print(20)
+
+for(i = 0; i < 10; i += 1) {
+	print(0)
+    break
+	print(i)
+}
+print(40)

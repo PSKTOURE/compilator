@@ -1,0 +1,15 @@
+export CLASSPATH=.:"/usr/share/java/*":$CLASSPATH
+antlr4 Calculette.g4
+javac *.java
+
+antlr4-grun Calculette 'calcul' > t1.mvap
+
+
+
+make
+java -cp "/usr/share/java/*:MVaP.jar" MVaPAssembler <nom>.mvap  
+
+exe:
+    java -jar MVaP.jar -d t1.mvap.cbap  
+        ou
+    java -jar MVaP.jar t1.mvap.cbap  

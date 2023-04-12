@@ -1,0 +1,11 @@
+int f(int x) {
+    int g(int y) {
+        if(y == 0) {
+            return x;
+        }
+        return g(y-1);
+    }
+    return g(6);
+}
+
+print(f(42))

@@ -1,0 +1,68 @@
+print(false)                %-> 0
+print(true)                 %-> 1
+print(5==5)                 %-> 1
+print(!false)               %-> 1
+print(!true)                %-> 0
+print(true && false)        %-> 0
+print(false && true)        %-> 0
+print(true && true)         %-> 1
+print(false || false)       %-> 0
+print(false || true)        %-> 1
+print(true || false)        %-> 1
+print(true || true)         %-> 1
+
+
+
+
+/** PUTAIIIIIN,j'ai fait ça pour rien (sauf si je met des else if en elif)
+
+if_else returns [ String code ]
+    : 'if' '(' c=condition ')' i1=instruction 'else' ie=instruction
+        {
+            String nextElseLab = getNewLabel() + "_if_else\n";
+
+            String end = getNewLabel() + "_if_else_end\n";
+            elif_out_labels.add(end);
+
+            $code = $c.code;
+            $code += "  JUMPF " + nextElseLab;
+            
+            $code += $i1.code;
+            $code += "  JUMP " + end;
+            
+            $code += "LABEL " + nextElseLab;
+            $code += $eli.code;
+
+            $code += $ie.code;
+            $code += "LABEL " + end;
+            
+            elif_out_labels.removeLast();
+
+        }
+    | 'if' '(' c=condition ')' i1=instruction
+        {
+            String end = getNewLabel() + "_if_else_end\n";
+            $code = $c.code;
+            $code += "  JUMPF " + end;
+            $code += $i1.code;
+            $code += "LABEL " + end;
+        }
+    ;
+
+elif returns [ String code ] @init{ $code = new String(); } 
+    : 'else if' '(' c=condition ')' i1=instruction eli=elif
+        {
+            String end = elif_out_labels.peekLast();
+            String nextElseLab = getNewLabel() + "_if_else\n";
+
+            $code = $c.code;
+            $code += "  JUMPF " + nextElseLab;
+
+            $code += $i1.code;
+            $code += "  JUMP " + end;
+            $code += "LABEL " + nextElseLab;
+            $code += $eli.code;
+        }
+    | () { $code = new String(); }
+    ; 
+*/

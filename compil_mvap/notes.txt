@@ -1,0 +1,7 @@
+ToDo:
+    - Assignation avec les fonctions imbriquées
+    - Mettre en commun
+    - Commentaire
+    - Tests
+    - Démos
+

@@ -1,0 +1,15 @@
+int f(int x, double z, int a) {
+    int aux(int y) {
+        int aux() {
+            input(z);
+        }
+        aux();
+        return y * 2;
+    }
+    print(z);
+    aux(2);
+    print(z);
+    return x;
+}
+
+print(f(10, 0.2, 666));

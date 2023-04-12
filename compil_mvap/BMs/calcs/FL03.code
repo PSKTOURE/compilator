@@ -1,0 +1,17 @@
+int i = 5;
+
+int f(int x) {
+    int aux(int y) {
+        print(i);
+        print(x);
+        x = 42;
+        print(x)
+        return y * 2;
+    }
+    print(x);
+    aux(2);
+    print(x);
+    return x;
+}
+
+print(f(10));

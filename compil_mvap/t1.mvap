@@ -1,0 +1,55 @@
+  PUSHI 0
+  PUSHI 5
+  STOREG 0
+  CALL Main
+LABEL f_0
+  JUMP f_0_core
+LABEL aux_0_0
+  JUMP aux_0_0_core
+  LABEL aux_0_0_core
+  PUSHL -3
+  WRITE
+  POP
+  PUSHI 5555
+  WRITE
+  POP
+  PUSHL -1
+  WRITE
+  PUSHR -3
+  WRITE
+  POP
+  PUSHI 6666
+  WRITE
+  POP
+  PUSHL -3
+  PUSHI 2
+  MUL
+  STOREL -4
+  RETURN
+RETURN
+  LABEL f_0_core
+  PUSHL -3
+  WRITE
+  POP
+  PUSHI 0
+  PUSHL -3
+  CALL aux_0_0
+  POP
+  STOREL -3
+  PUSHL -3
+  WRITE
+  POP
+  PUSHL -3
+  STOREL -4
+  RETURN
+RETURN
+LABEL Main
+  PUSHI 0
+  PUSHG 0
+  CALL f_0
+  POP
+  WRITE
+  POP
+  FREE 3
+  HALT
+

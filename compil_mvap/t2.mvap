@@ -1,0 +1,42 @@
+  CALL Main
+LABEL f_0
+  JUMP f_0_core
+LABEL g_0_0
+  JUMP g_0_0_core
+  LABEL g_0_0_core
+  PUSHL -3
+  PUSHI 0
+  EQUAL
+  JUMPF Label1_if_else_end
+  PUSHL -1
+  PUSHR -3
+  STOREL -4
+  RETURN
+LABEL Label1_if_else_end
+  PUSHI 0
+  PUSHL -3
+  PUSHI 1
+  SUB
+  CALL g_0_0
+  POP
+  STOREL -4
+  RETURN
+RETURN
+  LABEL f_0_core
+  PUSHI 0
+  PUSHI 6
+  CALL g_0_0
+  POP
+  STOREL -4
+  RETURN
+RETURN
+LABEL Main
+  PUSHI 0
+  PUSHI 42
+  CALL f_0
+  POP
+  WRITE
+  POP
+  FREE 2
+  HALT
+
